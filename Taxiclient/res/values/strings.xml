@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Taxiclient</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_second_client">Second_client</string>
+    <string name="title_activity_third_client">Third_client</string>
+    <string name="title_activity_splash_client">Splash_client</string>
+    <string name="title_activity_after_first">After_first</string>
+
+</resources>

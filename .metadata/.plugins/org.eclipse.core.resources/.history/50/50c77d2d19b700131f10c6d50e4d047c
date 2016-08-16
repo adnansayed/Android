@@ -1,0 +1,62 @@
+package com.pss.project;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+
+public class Purchase extends Activity{
+	Dbadapter db=new Dbadapter(getBaseContext());
+    
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.purchase);
+        initiate();
+	
+	}
+	
+	private void initiate() {
+		final EditText datetxt=(EditText) findViewById(R.id.editText4);
+		final EditText piecetxt=(EditText) findViewById(R.id.editText1);
+		final EditText kgtxt=(EditText) findViewById(R.id.editText2);
+		final EditText per_kgtxt=(EditText) findViewById(R.id.editText3);
+		final EditText totaltxt=(EditText) findViewById(R.id.editText5);
+	    Button b1= (Button) findViewById(R.id.button1);
+        b1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Log.d("test", "button entered");
+				String a, b;
+			    Integer sum;
+				a=kgtxt.getText().toString();
+				b=per_kgtxt.getText().toString();
+				sum=Integer.parseInt(a)*Integer.parseInt(b);
+				totaltxt.setText(String.valueOf(sum));
+				
+				//workin with db
+				
+				Log.d("test", "adding purchase");
+				long id=db.insertPurchase(datetxt.getText().toString(), piecetxt.getText().toString(), kgtxt.getText().toString(), per_kgtxt.getText().toString(), totaltxt.getText().toString());
+				Log.d("test", "purchase returned");
+				db.close();
+				
+				datetxt.setText("");
+				piecetxt.setText("");
+				kgtxt.setText("");
+				per_kgtxt.setText("");
+				totaltxt.setText("");
+				
+			}
+		});
+
+	}
+
+
+}

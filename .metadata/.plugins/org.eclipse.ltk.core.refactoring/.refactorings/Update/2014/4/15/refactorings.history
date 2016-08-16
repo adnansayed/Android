@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;TWO_MINUTES&apos; in &apos;com.pss.update.Myservice&apos; to &apos;FIVE_SEC&apos;&#x0D;&#x0A;- Original project: &apos;Update&apos;&#x0D;&#x0A;- Original element: &apos;com.pss.update.Myservice.TWO_MINUTES&apos;&#x0D;&#x0A;- Renamed element: &apos;com.pss.update.Myservice.FIVE_SEC&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;TWO_MINUTES&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.pss.update{Myservice.java[Myservice^TWO_MINUTES" name="FIVE_SEC" references="true" setter="false" stamp="1396778739446" textual="false" version="1.0"/>
+</session>
